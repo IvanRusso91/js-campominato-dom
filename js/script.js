@@ -18,10 +18,15 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 //-------------------------------------------------------
 const BOMBMAX = 16;
 const mainReset = document.querySelector('main');
+const resetPunteggio= document.querySelector('span');
+const stampa = document.getElementById('stampa');
+
+
 document.getElementById('play').addEventListener('click', play);
 
 function play(){
   reset();
+  resetPoint()
   const lvl = document.getElementById('lvl').value;
   const lvlGrid = [100,81,49]
   const cellNumber = lvlGrid[lvl];
@@ -35,6 +40,8 @@ function generatePlay(cellNumber){
   const field = document.createElement('div');
   field.className = 'field';
   const polveriera = callBombs(cellNumber);
+  const punti =[];
+  
 
   for (let i = 1; i <=cellNumber; i++){
     
@@ -43,14 +50,18 @@ function generatePlay(cellNumber){
     cell.innerHTML=`<span>${i}</span>`;
     
     cell.addEventListener('click', function(){
+      
       if(polveriera.includes(i)){
         this.classList.add('bomb');
+        stampa.innerHTML= `<h2>Spiacente hai perso! hai fatto ${punti.length} punti</h2>`;
+        
       }else{
         this.classList.add('clicked');
+        punti.push(i)
       }
       
     });
-
+    
     field.append(cell);
   }
   
@@ -77,4 +88,8 @@ function getRandomNumber(min, max) {
   
 function reset(){
   mainReset.innerHTML='';
+}
+
+function resetPoint(){
+  resetPunteggio.innerHTML='';
 }

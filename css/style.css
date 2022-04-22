@@ -26,7 +26,7 @@ main{
   align-items: center;
   flex-direction: column;
   background-color: rgb(2, 83, 121);
-  height: calc(100vh - 160px);
+  height: calc(100vh - 200px);
 }
 
 .field{
@@ -80,12 +80,20 @@ main{
 .bomb{
   background-color: rgb(206, 65, 22);
 }
+
+section{
+  text-align: center;
+  background-color: rgb(2, 83, 121);
+  padding-bottom: 10px;
+  color: rgb(255, 196, 0);
+  text-decoration: underline;
+} 
 /* /MAIN */
 
 /* FOOTER */
 
 .foot h6{
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .foot span{
   text-decoration: underline;
