@@ -16,7 +16,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 */
 
 //-------------------------------------------------------
-
+const BOMBMAX = 16;
 const mainReset = document.querySelector('main');
 document.getElementById('play').addEventListener('click', play);
 
@@ -25,16 +25,17 @@ function play(){
   const lvl = document.getElementById('lvl').value;
   const lvlGrid = [100,81,49]
   const cellNumber = lvlGrid[lvl];
-  console.log(cellNumber);
 
   generatePlay(cellNumber);
+  callBombs(cellNumber);
 
 }
 
 function generatePlay(cellNumber){
   const field = document.createElement('div');
   field.className = 'field';
-  
+  const polveriera = callBombs(cellNumber);
+
   for (let i = 1; i <=cellNumber; i++){
     
     const cell = document.createElement('div');
@@ -42,7 +43,12 @@ function generatePlay(cellNumber){
     cell.innerHTML=`<span>${i}</span>`;
     
     cell.addEventListener('click', function(){
-      this.classList.add('clicked');
+      if(polveriera.includes(i)){
+        this.classList.add('bomb');
+      }else{
+        this.classList.add('clicked');
+      }
+      
     });
 
     field.append(cell);
@@ -51,6 +57,23 @@ function generatePlay(cellNumber){
   mainReset.append(field);
 }
 
+
+function callBombs(cellNumber){
+  const callBombs=[];
+
+  while(callBombs.length < BOMBMAX){
+    const bomb = getRandomNumber(1, cellNumber);
+    if(!callBombs.includes(bomb)){
+      callBombs.push(bomb);
+    }
+  }
+  return callBombs;
+}
+
+
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
   
 function reset(){
   mainReset.innerHTML='';
