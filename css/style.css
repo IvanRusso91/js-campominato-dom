@@ -53,7 +53,7 @@ h1{
   align-items: center;
   border: 2px solid rgb(0, 0, 0);
   cursor: pointer;
-  background-image: url(https://i.pinimg.com/originals/3c/4f/1b/3c4f1b80c0a66f26c0a700e89a188cb5.png);
+  background-image: url(../img/door.png);
   background-size: cover;
   background-position: center;
   border-radius: 5px;
@@ -79,13 +79,13 @@ h1{
 } 
 
 .clicked{
-  background-image: url(https://i.pinimg.com/originals/50/b2/a4/50b2a42316c77ed764f1d4585eaa3fe3.png);
+  background-image: url(../img/room.png);
   background-size: cover;
   background-position: center;
 }
 
 .bomb{
-  background-image: url(https://w7.pngwing.com/pngs/26/828/png-transparent-pixel-art-pixel-art-text-computer-explosion.png);
+  background-image: url(../img/bomba.png);
   background-size: cover;
   background-position: center;
 }
