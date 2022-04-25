@@ -42,8 +42,8 @@ h1{
 }
 
 .field{
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
 }
 
 .cell{
@@ -51,46 +51,43 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
   cursor: pointer;
+  background-image: url(https://i.pinimg.com/originals/3c/4f/1b/3c4f1b80c0a66f26c0a700e89a188cb5.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
 }
+
+.cell span{
+  display: none;
+} 
 
 .square100{    
   width: calc(100% / 10);
   height: calc(100% / 10);
-  color: white;
 }  
 
 .square81{    
   width: calc(100% / 9);
   height: calc(100% / 9);
-  color: white;
 } 
 
 .square49{
   width: calc(100% / 7);
   height: calc(100% / 7);
-  color: white;
 } 
 
-.square-100 span,
-.square-81 span,
-.square-49 span{
-  display: none;
-}
-/*-------------- possibile problema ---------------*/
-.square-100.clicked span,
-.square-81.clicked span,
-.square-49.clicked span{
-  display: block;
-}
-/* ------------------------------------------------*/
 .clicked{
-  background-color: rgb(0, 195, 255);
+  background-image: url(https://i.pinimg.com/originals/50/b2/a4/50b2a42316c77ed764f1d4585eaa3fe3.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .bomb{
-  background-color: rgb(206, 65, 22);
+  background-image: url(https://w7.pngwing.com/pngs/26/828/png-transparent-pixel-art-pixel-art-text-computer-explosion.png);
+  background-size: cover;
+  background-position: center;
 }
 
 section{

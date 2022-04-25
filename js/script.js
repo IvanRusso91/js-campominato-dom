@@ -41,8 +41,8 @@ function generatePlay(cellNumber){
   field.className = 'field';
   const polveriera = callBombs(cellNumber);
   const punti =[];
+  const condition= false;
   
-
   for (let i = 1; i <=cellNumber; i++){
     
     const cell = document.createElement('div');
