@@ -35,10 +35,13 @@ main{
 }
 
 h1{
-  color: white;
+  color: rgb(247, 121, 4);
   padding: 15px 25px;
-  border: 2px solid white;
+  border: 2px solid rgb(247, 121, 4);
   border-radius: 50px;
+  background-image: url(../img/sfondo.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .field{

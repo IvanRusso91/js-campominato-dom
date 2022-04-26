@@ -32,7 +32,6 @@ function play(){
   const cellNumber = lvlGrid[lvl];
 
   generatePlay(cellNumber);
-  callBombs(cellNumber);
 
 }
 
